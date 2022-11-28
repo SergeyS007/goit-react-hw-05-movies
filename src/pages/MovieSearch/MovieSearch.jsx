@@ -30,7 +30,7 @@ const MovieSearch = () => {
         <button>Search</button>
       </form>
 
-      {movies && <MoviesList movies={movies.results} location={location} />}
+      {movies && <MoviesList movies={movies.results} />}
       <Outlet />
     </div>
   );

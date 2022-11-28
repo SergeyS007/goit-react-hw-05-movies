@@ -12,7 +12,9 @@ const MovieDetails = () => {
   return (
     <>
       <button
-        onClick={() => navigate(location?.state?.from ?? '/')}
+        onClick={() => {
+          navigate(location.state?.from ?? '/');
+        }}
         type="button"
       >
         Go back
@@ -43,10 +45,17 @@ const MovieDetails = () => {
       <p>Additional information</p>
       <ul>
         <li>
-          <Link to="cast">Cast</Link>
+          <Link to="cast" state={{ from: location.state?.from ?? '/cast' }}>
+            Cast
+          </Link>
         </li>
         <li>
-          <Link to="reviews">Reviews</Link>
+          <Link
+            to="reviews"
+            state={{ from: location.state?.from ?? '/reviews' }}
+          >
+            Reviews
+          </Link>
         </li>
       </ul>
       <Outlet />

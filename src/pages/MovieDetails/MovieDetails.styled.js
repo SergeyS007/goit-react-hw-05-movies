@@ -18,5 +18,6 @@ export const Li = styled.li`
   margin-right: 10px;
 `;
 export const Image = styled.img`
-  object-fit: cover;
+  object-fit: contain;
+  margin-right: 20px;
 `;
